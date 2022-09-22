@@ -54,7 +54,7 @@ class ProductsService {
     return this.products[index];
   }
 
-  delete(id) {
+  async delete(id) {
     const index = this.products.findIndex(item => item.id === id);
     if (index === -1) {
       throw new Error('product not found');
